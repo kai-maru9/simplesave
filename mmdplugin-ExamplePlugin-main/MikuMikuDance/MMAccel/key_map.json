@@ -1,0 +1,148 @@
+{
+  "BonePrev": [
+    38
+  ],
+  "FrameKeyNext": [
+    33
+  ],
+  "ViewBack": [
+    56
+  ],
+  "FrameRegister": [
+    13
+  ],
+  "MainChangeEditor": [
+    191
+  ],
+  "ViewTop": [
+    53
+  ],
+  "MenuEditDeleteVerticalFramesMorphOrLighting": [
+    74
+  ],
+  "MenuEditCorrectBone": [
+    82
+  ],
+  "MenuEditCenterBias": [
+    68
+  ],
+  "MenuFileSave": [
+    17,
+    83
+  ],
+  "MenuEditInsertEmptyFrame": [
+    73
+  ],
+  "MenuEditDeleteVerticalFrames": [
+    75
+  ],
+  "KeyCopy": [
+    17,
+    67
+  ],
+  "InterpolationLinear": [
+    69
+  ],
+  "MainExShadow": [
+    17,
+    66
+  ],
+  "MenuViewHalfTransparency": [
+    86
+  ],
+  "MenuViewFullScreen": [
+    13,
+    18
+  ],
+  "TabKey": [
+    9
+  ],
+  "MenuHelpReloadTexture": [
+    17,
+    82
+  ],
+  "FrameHead": [
+    36
+  ],
+  "ViewLeft": [
+    52
+  ],
+  "BoneRotate": [
+    88
+  ],
+  "BoneSelect": [
+    67
+  ],
+  "BoneMove": [
+    90
+  ],
+  "MenuBackgroundBlack": [
+    66
+  ],
+  "FramePrev": [
+    37
+  ],
+  "MenuBackgroundCaptureOn3": [
+    51
+  ],
+  "KeyPaste": [
+    17,
+    86
+  ],
+  "ChangeSpace": [
+    76
+  ],
+  "MenuEditAnotherFramePaste": [
+    70
+  ],
+  "ExitFullscreen": [
+    27
+  ],
+  "KeyDelete": [
+    46
+  ],
+  "FrameLast": [
+    35
+  ],
+  "BoneNext": [
+    40
+  ],
+  "FrameKeyPrev": [
+    34
+  ],
+  "Play": [
+    32
+  ],
+  "MenuEditInsertEmptyFrameMorphOrLighting": [
+    85
+  ],
+  "BoneAllSelect": [
+    65
+  ],
+  "ViewFront": [
+    50
+  ],
+  "ViewBottom": [
+    48
+  ],
+  "InterpolationAuto": [
+    221
+  ],
+  "FrameNext": [
+    39
+  ],
+  "Redo": [
+    17,
+    88
+  ],
+  "ViewRight": [
+    54
+  ],
+  "BoneUnregisterSelect": [
+    83
+  ],
+  "Undo": [
+    17,
+    90
+  ]
+}

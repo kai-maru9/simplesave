@@ -81,22 +81,22 @@ static LONG_PTR g_pOriginWndProc = NULL;
 
 // メニューID
 enum MenuCommands {
-    ID_BACKUP_NOW = 40001,
-    ID_TOGGLE_AUTO = 40002,
-    ID_TOGGLE_DIALOG = 40003,
-    ID_INTERVAL_1 = 40010,
-    ID_INTERVAL_3 = 40011,
-    ID_INTERVAL_5 = 40012,
-    ID_INTERVAL_10 = 40013,
-    ID_INTERVAL_15 = 40014,
-    ID_INTERVAL_30 = 40015,
-    ID_INTERVAL_60 = 40016,
-    ID_MAX_FILES_10 = 40020,
-    ID_MAX_FILES_30 = 40021,
-    ID_MAX_FILES_50 = 40022,
-    ID_MAX_FILES_100 = 40023,
-    ID_MAX_FILES_UNLIMITED = 40024,
-    ID_ABOUT = 40030
+    ID_BACKUP_NOW = 41001,
+    ID_TOGGLE_AUTO = 41002,
+    ID_TOGGLE_DIALOG = 41003,
+    ID_INTERVAL_1 = 41010,
+    ID_INTERVAL_3 = 41011,
+    ID_INTERVAL_5 = 41012,
+    ID_INTERVAL_10 = 41013,
+    ID_INTERVAL_15 = 41014,
+    ID_INTERVAL_30 = 41015,
+    ID_INTERVAL_60 = 41016,
+    ID_MAX_FILES_10 = 41020,
+    ID_MAX_FILES_30 = 41021,
+    ID_MAX_FILES_50 = 41022,
+    ID_MAX_FILES_100 = 41023,
+    ID_MAX_FILES_UNLIMITED = 41024,
+    ID_ABOUT = 41030
 };
 
 static LRESULT CALLBACK pluginWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
@@ -277,16 +277,41 @@ void CPlugin::createMenu() {
     DrawMenuBar(getHWND());
 }
 
+// [変更箇所]
 void CPlugin::updateMenu() {
     if (!m_hMenu) return;
 
-    // メニューアイテムのチェック状態を更新
+    // メインメニューのチェック状態を更新
     CheckMenuItem(m_hMenu, ID_TOGGLE_AUTO, g_settings.autoBackupEnabled ? MF_CHECKED : MF_UNCHECKED);
     CheckMenuItem(m_hMenu, ID_TOGGLE_DIALOG, g_settings.showSuccessDialog ? MF_CHECKED : MF_UNCHECKED);
+
+    // サブメニューのハンドルを取得
+    // createMenuの構成から、バックアップ間隔は6番目(index 5), 最大バックアップ数は7番目(index 6)のメニュー項目
+    HMENU intervalMenu = GetSubMenu(m_hMenu, 5);
+    HMENU maxFilesMenu = GetSubMenu(m_hMenu, 6);
+
+    // バックアップ間隔のチェック状態を更新
+    if (intervalMenu) {
+        UINT intervalIds[] = { ID_INTERVAL_1, ID_INTERVAL_3, ID_INTERVAL_5, ID_INTERVAL_10, ID_INTERVAL_15, ID_INTERVAL_30, ID_INTERVAL_60 };
+        int intervalValues[] = { 1, 3, 5, 10, 15, 30, 60 };
+        for (int i = 0; i < sizeof(intervalIds) / sizeof(UINT); ++i) {
+            CheckMenuItem(intervalMenu, intervalIds[i], (g_settings.intervalMinutes == intervalValues[i]) ? MF_CHECKED : MF_UNCHECKED);
+        }
+    }
+
+    // 最大ファイル数のチェック状態を更新
+    if (maxFilesMenu) {
+        UINT maxFilesIds[] = { ID_MAX_FILES_10, ID_MAX_FILES_30, ID_MAX_FILES_50, ID_MAX_FILES_100, ID_MAX_FILES_UNLIMITED };
+        int maxFilesValues[] = { 10, 30, 50, 100, 9999 };
+        for (int i = 0; i < sizeof(maxFilesIds) / sizeof(UINT); ++i) {
+            CheckMenuItem(maxFilesMenu, maxFilesIds[i], (g_settings.maxBackupFiles == maxFilesValues[i]) ? MF_CHECKED : MF_UNCHECKED);
+        }
+    }
 
     // メニューを再描画
     DrawMenuBar(getHWND());
 }
+// [/変更箇所]
 
 UINT CPlugin::getBackupMenuId() const { return ID_BACKUP_NOW; }
 UINT CPlugin::getAboutMenuId() const { return ID_ABOUT; }

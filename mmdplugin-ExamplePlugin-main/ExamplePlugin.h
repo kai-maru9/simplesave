@@ -20,11 +20,13 @@ public:
     void stop() override;
 
     // パブリックメソッド
-    void triggerSave();
+    void triggerSave(bool forceDialog);
     void openBackupFolder();
     void showSettings();
     UINT getBackupMenuId() const;
     UINT getAboutMenuId() const;
+
+    void updateMenu(); // updateMenuを追加
 
 private:
     void createMenu();

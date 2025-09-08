@@ -1,64 +1,10 @@
-﻿  dllmain.cpp
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\dllmain.cpp(10,12): warning C4100: 'lpReserved': 参照されないパラメーター
-  ExamplePlugin.cpp
+﻿  ExamplePlugin.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\shlwapi.h(1781,1): warning C4459: 'a' を宣言すると、グローバル宣言が隠蔽されます
   (ソース ファイル 'ExamplePlugin.cpp' をコンパイルしています)
       C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\lib\mmd_plugin.h(854,24):
       'mmp::a' の宣言を確認してください
   
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(109,28): error C2660: 'CPlugin::triggerSave': 関数に 1 個の引数を指定できません。
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.h(23,10):
-      'CPlugin::triggerSave' の宣言を確認してください
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(109,28):
-      引数リスト '(bool)' を一致させようとしているとき
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(121,28): error C2039: 'updateMenu': 'CPlugin' のメンバーではありません
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.h(13,7):
-      'CPlugin' の宣言を確認してください
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(127,28): error C2039: 'updateMenu': 'CPlugin' のメンバーではありません
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.h(13,7):
-      'CPlugin' の宣言を確認してください
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(142,28): error C2039: 'updateMenu': 'CPlugin' のメンバーではありません
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.h(13,7):
-      'CPlugin' の宣言を確認してください
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(158,28): error C2039: 'updateMenu': 'CPlugin' のメンバーではありません
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.h(13,7):
-      'CPlugin' の宣言を確認してください
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(165,28): error C2039: 'updateMenu': 'CPlugin' のメンバーではありません
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.h(13,7):
-      'CPlugin' の宣言を確認してください
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(280,15): error C2039: 'updateMenu': 'CPlugin' のメンバーではありません
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.h(13,7):
-      'CPlugin' の宣言を確認してください
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(281,10): error C2065: 'm_hMenu': 定義されていない識別子です。
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(284,19): error C2065: 'm_hMenu': 定義されていない識別子です。
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(285,19): error C2065: 'm_hMenu': 定義されていない識別子です。
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(356,15): error C2511: 'void CPlugin::triggerSave(bool)': オーバーロードされたメンバー関数が 'CPlugin' にありません。
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.h(13,7):
-      'CPlugin' の宣言を確認してください
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(357,31): error C2352: 'CPlugin::getCurrentPmmPath': 非静的メンバー関数の呼び出しにはオブジェクトが必要です
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(294,19):
-      'CPlugin::getCurrentPmmPath' の宣言を確認してください
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(400,9): error C2352: 'CPlugin::cleanupOldBackups': 非静的メンバー関数の呼び出しにはオブジェクトが必要です
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(315,15):
-      'CPlugin::cleanupOldBackups' の宣言を確認してください
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(409,9): error C2597: 静的でないメンバー 'CPlugin::m_lastBackupTime' への参照が正しくありません。
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.h(45,43):
-      'CPlugin::m_lastBackupTime' の宣言を確認してください
-  
-C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(441,21): error C2660: 'CPlugin::triggerSave': 関数に 1 個の引数を指定できません。
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.h(23,10):
-      'CPlugin::triggerSave' の宣言を確認してください
-      C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\ExamplePlugin.cpp(441,21):
-      引数リスト '(bool)' を一致させようとしているとき
-  
-  コードを生成中...
+  LINK : 前回のインクリメンタル リンクで MikuMikuDance\Plugin\ExamplePlugin\ExamplePlugin.dll が見つからなかったか、ビルドされませんでした。フル リンクを行います。
+     ライブラリ MikuMikuDance\Plugin\ExamplePlugin\ExamplePlugin.lib とオブジェクト MikuMikuDance\Plugin\ExamplePlugin\ExamplePlugin.exp を作成中
+  ExamplePlugin.vcxproj -> C:\Users\yamam\Downloads\mmdplugin-ExamplePlugin-main\mmdplugin-ExamplePlugin-main\MikuMikuDance\Plugin\ExamplePlugin\ExamplePlugin.dll
+          1 個のファイルをコピーしました。
